@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="common" template="/WEB-INF/layout/home.jsp">
+		<put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/layout/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+
+		<put-list-attribute name="scripts">
+			<add-attribute value="/resources/angular/angular.min.js" />
+			<add-attribute value="/resources/jquery/jquery-3.1.1.min.js" />
+			<add-attribute value="/resources/js-angular/bookController.js" />
+			<add-attribute value="/resources/js-angular/userController.js" />
+			<add-attribute value="/resources/js/bootstrap.min.js" />
+		</put-list-attribute>
+
+		<put-list-attribute name="stylesheet">
+			<add-attribute value="/resources/css/bootstrap.min.css" />
+			<add-attribute value="/resources/css-layout/search.css" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="home" extends="common">
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="BookList" extends="common">
+		<put-attribute name="body"
+			value="/WEB-INF/pages/jsp/Book/BookList.jsp" />
+		<put-attribute name="header" value="" />
+	</definition>
+
+	<definition name="CreateBook" extends="common">
+		<put-attribute name="body"
+			value="/WEB-INF/pages/jsp/Book/CreateBook.jsp" />
+		<put-attribute name="header" value="" />
+	</definition>
+
+	<definition name="UserList" extends="common">
+		<put-attribute name="body"
+			value="/WEB-INF/pages/jsp/User/UserList.jsp" />
+		<put-attribute name="header" value="" />
+	</definition>
+
+	<definition name="CreateUser" extends="common">
+		<put-attribute name="body"
+			value="/WEB-INF/pages/jsp/User/CreateUser.jsp" />
+		<put-attribute name="header" value="" />
+	</definition>
+
+	<definition name="OrderList" extends="common">
+		<put-attribute name="body"
+			value="/WEB-INF/pages/jsp/Orders/OrderList.jsp" />
+		<put-attribute name="header" value="" />
+	</definition>
+
+
+</tiles-definitions>
